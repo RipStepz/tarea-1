@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 
-int coordenadas(float contador);
+int filas(float contador);
+int columnas (float contador);
 
 #endif

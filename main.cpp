@@ -14,9 +14,6 @@ struct Pieza
 
 };
 
-
-
-
 struct Tablero 
 {
 
@@ -57,7 +54,7 @@ while(!fich.eof()) // while para recorrer los caracteres
     
     if (caracter != '.' && caracter != '\n')
     {
-        cout<<"la letra es: " <<caracter << " su fila es la: "<<coordenadas(contador) << " el contador es: " << contador <<endl;
+        cout<<"la letra es: " <<caracter << " su fila es la: "<<filas(contador) << " su columna es: "<< columnas(contador) <<endl;
     }
     contador++;
     if (caracter == '\n')
