@@ -1,0 +1,166 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[activeacute,spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{enumerate}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{multicol}
+\usepackage{geometry}
+\usepackage{fullpage}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,automata,patterns,shadows}
+
+\setlength\parindent{0pt}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{center}
+{\LARGE \textbf{INF152} Estructuras Discretas}\\
+%REEMPLAZAR X POR EL NOMBRE DE LA ACTIVIDAD
+{\large Actividad Opcional X}\\
+Departamento de Informática\\
+Universidad Técnica Federico Santa María
+
+\vspace{0.7cm}
+\begin{minipage}[t]{0.3\textwidth}
+    Nombre: Arturo Almonacid
+    \vspace{0.1cm}
+    
+    Rol: 202373515-9
+    \vspace{0.1cm}
+
+    Paralelo: 203
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+    Nombre: Martina Hidalgo
+    \vspace{0.1cm}
+
+    Rol: 202373597-3
+    \vspace{0.1cm}
+
+    Paralelo: 203
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+    Nombre: Vicente Silva Rios
+    \vspace{0.1cm}
+
+    Rol: 202373514-0
+    \vspace{0.1cm}
+
+    Paralelo: 203
+
+\end{minipage}
+\vspace{0.4cm}
+
+\end{center}
+\textbf{Instrucciones}: poner \textbf{nombre y ROL} de todos los integrantes. Se puede responder en grupos de hasta 3 personas. De tener la respuesta correcta, se bonificará \textbf{0.5} puntos a la Nota Final (NF). Antes de entregar la respuesta se puede tomar una foto de la respuesta y así poder transcribir exactamente su respuesta a \LaTeX. Esta respuesta debe ser entregada por aula. Una sola copia por grupo (poner los datos de los integrantes nuevamente). Si lo enviado es distinto de lo entregado en clases, se entenderá que es copia y se eliminarán \textbf{todos} los puntos de Actividades Opcionales (AO) del semestre y además, no se podrán rendir las AO restantes. Si lo entregado en \LaTeX\ es lo mismo que su respuesta previa (la que debe estar correcta), obtendrá otro \textbf{0.5} a sumarse a su NF.
+
+\textbf{Recuerden poner nombre, rol y paralelo}
+
+\vspace{0.4cm}
+\textbf{Solución:}
+
+\begin{enumerate}
+    
+    \item  
+    
+    \begin{itemize}
+        \item p = Si llueve
+        \item q = Voy al colegio
+        \item r = Me quedo en casa
+        \item s = Como un helado
+    \end{itemize}
+    
+\vspace{0.5cm}
+
+\vspace{0.4cm}
+    \item
+    \begin{itemize}
+        \item (p  $\Rightarrow$  $\neg$q)
+        \item (r  $\Rightarrow$  $\neg$q)
+        \item (r  $\oplus$  s)   
+        \item ($\neg$q $\wedge$  $\neg$s)
+    \end{itemize}
+
+\vspace{0.6cm}
+\textbf{Asumiendo que p es verdadero:}
+    \item \begin{center}
+    \vspace{0.5cm}
+    \begin{minipage}{0.2\textwidth}
+        \begin{itemize}
+            \item p $\equiv$ V  p=v, q=f, r=v, s=f
+            \item q $\equiv$ F
+            \item r $\equiv$ V
+            \item s $\equiv$ F
+        \end{itemize}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.3\textwidth}
+       \begin{itemize}
+    \item (p $\Rightarrow$ $\neg$q) $\equiv$ v 
+    \item (v $\Rightarrow$ v) $\equiv$ v    
+    \end{itemize}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.3\textwidth}
+        Para que (p $\Rightarrow$ q) sea \textbf{verdadero}
+        $\neg$q es \textbf{verdadero} por ende q es \textbf{falso}
+    \end{minipage}
+\end{center}
+    
+\end{enumerate}
+\vspace{0.5cm}
+\begin{center}
+    \begin{minipage}{0.4\textwidth}
+        \begin{itemize}
+            \item (r $\Rightarrow$ $\neg$q) $\equiv$ v 
+            \item (v $\Rightarrow$ v) $\equiv$ v
+        \end{itemize}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.4\textwidth}
+        Para que (r $\Rightarrow$ $\neg$q) sea verdadero s debe ser falso
+    \end{minipage}
+\end{center}
+
+\vspace{0.5cm}
+
+\begin{center}
+    \begin{minipage}{0.4\textwidth}
+        \begin{itemize}
+            \item (r $\oplus$ s) $\equiv$ v
+            \item (v $\oplus$ f) $\equiv$ v
+        \end{itemize}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.4\textwidth}
+        Para que (r $\oplus$ s) sea verdadero s debe ser falso
+    \end{minipage}
+\end{center}
+
+\vspace{0.5cm}
+
+\begin{center}
+    \begin{minipage}{0.4\textwidth}
+        \begin{itemize}
+            \item ($\neg$q $\wedge$ $\neg$s) $\equiv$ v 
+            \item (v $\wedge$ v) $\equiv$ v
+        \end{itemize}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.4\textwidth}
+        Al analizar este resultado podemos comprobar que esta conversacion es consistente
+    \end{minipage}
+\end{center}
+
+
+
+\end{document}
