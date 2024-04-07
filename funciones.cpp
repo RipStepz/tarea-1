@@ -57,4 +57,3 @@ int coordenadas(float contador) {
         return -1;
     }
 }
-

@@ -43,7 +43,7 @@ cout<<"se abrio UwU" << endl;
 
 char caracter;
 string numero = "";
-float contador = 0;
+float contador = 1;
 
 if (getline(fich , numero))
 {
@@ -54,15 +54,16 @@ while(!fich.eof()) // while para recorrer los caracteres
 {
 
     fich.get(caracter);
-   
     
-    
-    
-    if (caracter != '.')
+    if (caracter != '.' && caracter != '\n')
     {
-        cout<< coordenadas(contador) <<endl;
+        cout<<"la letra es: " <<caracter << " su fila es la: "<<coordenadas(contador) << " el contador es: " << contador <<endl;
     }
     contador++;
+    if (caracter == '\n')
+    {
+        contador = contador -1;
+    }
 }
 
 fich.close();
