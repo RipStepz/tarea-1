@@ -48,7 +48,7 @@ t.piezas_tablero = new Pieza[64];
 
  if (getline(fich , numero))
  {
-     cout << "hola" << endl;
+    t.cantidad_piezas = stoi(numero);
  }
 
 while(!fich.eof()) // while para recorrer los caracteres
@@ -77,10 +77,10 @@ while(!fich.eof()) // while para recorrer los caracteres
         c_arreglo = c_arreglo -1;
     }
 }
-//  for (int i = 0 ;i<64 ;i++)
-//  {
-//      cout << "el caracter: "<<t.piezas_tablero[i].simbolo<<" se encuentra en la pos x: " << t.piezas_tablero[i].x <<" se encuentra en la pos y: "<< t.piezas_tablero[i].y<<endl;
-//  }
+  for (int i = 0 ;i<64 ;i++)
+  {
+      cout << "el caracter: "<<t.piezas_tablero[i].simbolo<<" se encuentra en la pos x: " << t.piezas_tablero[i].x <<" se encuentra en la pos y: "<< t.piezas_tablero[i].y<<endl;
+  }
 
 
 
