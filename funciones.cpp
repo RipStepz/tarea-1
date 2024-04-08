@@ -62,12 +62,17 @@ int columnas (float contador)
         return contador;
      }
 
-    else if ((contador > 8) && (contador <=16))
+    else if ((contador > 8) && (contador <16))
      {  
         int returneable = contador;
         returneable = returneable % 8;
 
         return (returneable);
+     }
+
+     else if (contador == 16)
+     {
+        return 8;
      }
 
     else if ((contador > 16) && (contador <=24))

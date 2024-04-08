@@ -16,7 +16,7 @@ struct Pieza
 
 struct Tablero 
 {
-
+ int cantidad_piezas;
  Pieza* piezas_tablero; // Lista de piezas que tiene el tablero
 
 };
@@ -41,27 +41,48 @@ cout<<"se abrio UwU" << endl;
 char caracter;
 string numero = "";
 float contador = 1;
+int c_arreglo = 0;
+const int Max = 64;
+Tablero t;
+t.piezas_tablero = new Pieza[64];
 
-if (getline(fich , numero))
-{
-    cout << numero << endl;
-}
+ if (getline(fich , numero))
+ {
+     cout << "hola" << endl;
+ }
 
 while(!fich.eof()) // while para recorrer los caracteres
 {
 
     fich.get(caracter);
-    
     if (caracter != '.' && caracter != '\n')
     {
-        cout<<"la letra es: " <<caracter << " su fila es la: "<<filas(contador) << " su columna es: "<< columnas(contador) <<endl;
+        //cout<<"la letra es: " <<caracter << " su fila es la: "<<filas(contador) << " su columna es: "<< columnas(contador) <<endl;
     }
+   
+       if (caracter != '\n')
+     {
+         t.piezas_tablero[c_arreglo].simbolo = caracter;
+         t.piezas_tablero[c_arreglo].x = columnas(contador);
+         t.piezas_tablero[c_arreglo].y = filas(contador);
+
+     }
+
     contador++;
+    c_arreglo++;
+
     if (caracter == '\n')
     {
         contador = contador -1;
+        c_arreglo = c_arreglo -1;
     }
 }
+//  for (int i = 0 ;i<64 ;i++)
+//  {
+//      cout << "el caracter: "<<t.piezas_tablero[i].simbolo<<" se encuentra en la pos x: " << t.piezas_tablero[i].x <<" se encuentra en la pos y: "<< t.piezas_tablero[i].y<<endl;
+//  }
+
+
 
 fich.close();
 
