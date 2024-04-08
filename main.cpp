@@ -2,6 +2,7 @@
 #include <fstream> 
 #include <stdio.h>
 #include "funciones.hpp"
+
 using namespace std;
 
 int main() {
@@ -83,7 +84,7 @@ while(!fich.eof()) // while para recorrer los caracteres
   }
 
 
-
+cout << peon( 1 ,  2);
 fich.close();
 
     return 0;
