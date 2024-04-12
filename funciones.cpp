@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdexcept>
 #include "funciones.hpp"
 
 using namespace std;
@@ -136,6 +137,25 @@ bool jugada_dentro_tablero(int x,int y) {
 
 }
 
-int Pos_Rey(struct Tablero& t){
-    return 1;
+int Pos_Rey_x(const Tablero& t){
+    for (int i = 0 ;i<64 ;i++)
+  {
+      if (t.piezas_tablero[i].simbolo =='X'){
+        int rey_x = t.piezas_tablero[i].x;
+        return rey_x;
+      }
+  }
+     throw std::runtime_error("Rey no encontrado en el tablero");
+}
+
+int Pos_Rey_y(const Tablero& t){
+    for (int i = 0 ;i<64 ;i++)
+  {
+      if (t.piezas_tablero[i].simbolo =='X'){
+        int rey_y = t.piezas_tablero[i].y;
+        return rey_y;
+      }
+      
+  }
+    throw std::runtime_error("Rey no encontrado en el tablero");
 }

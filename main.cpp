@@ -7,20 +7,7 @@ using namespace std;
 
 int main() {
 
-struct Pieza 
-{
-
- char simbolo; // Define qué tipo de pieza es y su caracter
- int x, y; // Su posición dentro del tablero [0, 7] x [0, 7]
-
-};
-
-struct Tablero 
-{
- int cantidad_piezas;
- Pieza* piezas_tablero; // Lista de piezas que tiene el tablero
-
-};
+//los strucs estan en definidos en funciones.cpp, porque osino causan conflicto (si los usamos:3)
 
 ifstream fich("no.txt");
 
@@ -78,14 +65,16 @@ while(!fich.eof()) // while para recorrer los caracteres
         c_arreglo = c_arreglo -1;
     }
 }
-  for (int i = 0 ;i<64 ;i++)
-  {
-      cout<< "el caracter: "<<t.piezas_tablero[i].simbolo<<" se encuentra en la pos x: " << t.piezas_tablero[i].x <<" se encuentra en la pos y: "<< t.piezas_tablero[i].y<<endl;
-  }
+    for (int i = 0 ;i<64 ;i++)
+    {
+       cout<< "el caracter: "<<t.piezas_tablero[i].simbolo<<" se encuentra en la pos x: " << t.piezas_tablero[i].x <<" se encuentra en la pos y: "<< t.piezas_tablero[i].y<<endl;
+    }
 
 
+cout << "la posicion x del rey es: "<<Pos_Rey_x(t) <<"la posicion y del rey es: "<< Pos_Rey_y(t)<<endl;
 
+delete[] t.piezas_tablero;
 fich.close();
-
     return 0;
+
 }

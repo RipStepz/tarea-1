@@ -3,13 +3,6 @@
 
 #include <stdio.h>
 
-
-int filas(float contador);
-int columnas (float contador);
-int peon(int x, int y);
-bool jugada_dentro_tablero(int x,int y);
-int Pos_Rey(struct Tablero& t);
-
 struct Pieza 
 {
 
@@ -24,6 +17,14 @@ struct Tablero
  Pieza* piezas_tablero; // Lista de piezas que tiene el tablero
 
 };
+
+int filas(float contador);
+int columnas (float contador);
+int peon(int x, int y);
+bool jugada_dentro_tablero(int x,int y);
+int Pos_Rey_x(const Tablero& t);
+int Pos_Rey_y(const Tablero& t);
+
 
 
 #endif
