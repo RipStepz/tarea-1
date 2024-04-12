@@ -1,6 +1,5 @@
 #ifndef FUNCIONES_HPP
 #define FUNCIONES_HPP
-#define LOGICA_PIEZAS_HPP
 
 #include <stdio.h>
 

@@ -4,5 +4,5 @@ using namespace std;
 
 int peon(int x, int y)
 {
-    return 5;
+    return 1;
 } 

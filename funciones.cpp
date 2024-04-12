@@ -55,6 +55,7 @@ int filas(float contador) {
 }
 
 int columnas (float contador)
+
 {
 
     if (contador <= 8)
@@ -120,3 +121,4 @@ int columnas (float contador)
         return -1;
      }
 }
+

@@ -83,9 +83,9 @@ while(!fich.eof()) // while para recorrer los caracteres
       cout << "el caracter: "<<t.piezas_tablero[i].simbolo<<" se encuentra en la pos x: " << t.piezas_tablero[i].x <<" se encuentra en la pos y: "<< t.piezas_tablero[i].y<<endl;
   }
 
-
-cout << peon( 1 ,  2);
 fich.close();
+
+cout<< peon(1 , 2) << endl;
 
     return 0;
 }
