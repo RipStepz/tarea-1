@@ -27,7 +27,7 @@ ifstream fich("no.txt");
 if (!fich.is_open()) // if para comprobar si esta abierto
 {
 
-cout<< "hubo un error al abrir el archivo UwU´nt" << endl;
+cout << "hubo un error al abrir el archivo UwU´nt" << endl;
 
 
 }
@@ -80,12 +80,12 @@ while(!fich.eof()) // while para recorrer los caracteres
 }
   for (int i = 0 ;i<64 ;i++)
   {
-      cout << "el caracter: "<<t.piezas_tablero[i].simbolo<<" se encuentra en la pos x: " << t.piezas_tablero[i].x <<" se encuentra en la pos y: "<< t.piezas_tablero[i].y<<endl;
+      cout<< "el caracter: "<<t.piezas_tablero[i].simbolo<<" se encuentra en la pos x: " << t.piezas_tablero[i].x <<" se encuentra en la pos y: "<< t.piezas_tablero[i].y<<endl;
   }
 
-fich.close();
 
-cout<< peon(1 , 2) << endl;
+
+fich.close();
 
     return 0;
 }

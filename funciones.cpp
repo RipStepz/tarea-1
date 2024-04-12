@@ -1,5 +1,6 @@
 #include <iostream>
 #include "funciones.hpp"
+
 using namespace std;
 
 int filas(float contador) {
@@ -122,3 +123,19 @@ int columnas (float contador)
      }
 }
 
+bool jugada_dentro_tablero(int x,int y) {
+     int pos_max_x = 7 , pos_max_y = 7 , pos_min_x = 0 , pos_min_y = 0;
+
+    if (x < pos_max_x && x > pos_min_x && y < pos_max_y && y > pos_min_y){
+        return true;
+    }
+
+    else{
+        return false;
+    }
+
+}
+
+int Pos_Rey(struct Tablero& t){
+    return 1;
+}

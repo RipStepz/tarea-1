@@ -3,8 +3,27 @@
 
 #include <stdio.h>
 
+
 int filas(float contador);
 int columnas (float contador);
 int peon(int x, int y);
+bool jugada_dentro_tablero(int x,int y);
+int Pos_Rey(struct Tablero& t);
+
+struct Pieza 
+{
+
+ char simbolo; // Define qué tipo de pieza es y su caracter
+ int x, y; // Su posición dentro del tablero [0, 7] x [0, 7]
+
+};
+
+struct Tablero 
+{
+ int cantidad_piezas;
+ Pieza* piezas_tablero; // Lista de piezas que tiene el tablero
+
+};
+
 
 #endif
