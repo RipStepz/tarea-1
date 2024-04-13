@@ -75,7 +75,7 @@ Global_x_rey = Pos_Rey_x(t);
 Global_y_rey = Pos_Rey_y(t);
 //cout << "la posicion x del rey es: "<<Pos_Rey_x(t) <<"la posicion y del rey es: "<< Pos_Rey_y(t)<<endl;
 
-if (peon(8,6)){
+if (alfil(3,1)){
     cout<< "jaque" << endl;
 }
 else{

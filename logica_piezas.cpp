@@ -36,6 +36,7 @@ while (contador < 9)
   else if (x - contador == Global_x_rey && y - contador == Global_y_rey && jugada_dentro_tablero(x - contador, y - contador)){
     return true;
     }
+contador ++;
 }
 return false;
 }
@@ -56,6 +57,7 @@ while (contador < 9)
   else if (y - contador == Global_y_rey && jugada_dentro_tablero(x , y - contador)){
     return true;
     }
+contador ++;
 }
 return false;
 }
