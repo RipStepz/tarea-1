@@ -2,7 +2,6 @@
 #include "funciones.hpp"
 using namespace std;
 extern Tablero t;
-extern int Global_x_rey, Global_y_rey;
 
 void peon(const Tablero& t)
 {
@@ -17,36 +16,45 @@ void peon(const Tablero& t)
         }
       }
 
+void alfil(const Tablero& t){
+for (int i = 0 ;i<64 ;i++)
+      {
+        if (t.piezas_tablero[i].simbolo == 'A'){
+          int Pos_x = t.piezas_tablero[i].x , Pos_Y = t.piezas_tablero[i].y, contador = 1;
+          bool flag_1 = true , flag_2 = true , flag_3 = true , flag_4 = true;
 
+            while (contador < 9){
+            if (flag_1){
+            Marcar_amenazas(t , Pos_x + contador , Pos_Y + contador);
+              if (Descartar_casos(Pos_x + contador , Pos_Y + contador)){
+                flag_1 = false;
+              }
+            }
+            if (flag_2){
+            Marcar_amenazas(t , Pos_x - contador , Pos_Y + contador);
+              if (Descartar_casos(Pos_x - contador , Pos_Y + contador)){
+                flag_2 = false;
+              }
+            }
 
+            if (flag_3){
+            Marcar_amenazas(t , Pos_x + contador , Pos_Y - contador);
+              if (Descartar_casos(Pos_x + contador , Pos_Y - contador)){
+                flag_3 = false;
+              }
+            }
 
-// bool alfil (int x , int y){
-// int contador = 1;
-// while (contador < 9)
-// {
-//   if (x + contador == Global_x_rey && y + contador == Global_y_rey && jugada_dentro_tablero(x + contador, y + contador)){
-    
-//       return true;
-//     }
-    
-
-//   else if (x - contador == Global_x_rey && y + contador == Global_y_rey && jugada_dentro_tablero(x - contador, y + contador)){
-//     return true;
-//     }
-
-//   else if (x + contador == Global_x_rey && y - contador == Global_y_rey && jugada_dentro_tablero(x + contador, y - contador)){
-//     return true;
-//     }
-
-//   else if (x - contador == Global_x_rey && y - contador == Global_y_rey && jugada_dentro_tablero(x - contador, y - contador) ){
-//     return true;
-//     }
-
-// contador ++;
-// return false;
-// }
-// }
-
+            if (flag_4){
+            Marcar_amenazas(t , Pos_x - contador , Pos_Y - contador );
+              if (Descartar_casos(Pos_x - contador , Pos_Y - contador)){
+                flag_4 = false;
+              }
+            }
+            contador ++;
+          }
+        }
+      }
+}
 
 // bool torre(int x,int y){
 // int contador = 1;

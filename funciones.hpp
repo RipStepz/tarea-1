@@ -30,9 +30,10 @@ bool jugada_dentro_tablero(int x,int y);
 int Pos_Rey_x(const Tablero& t);
 int Pos_Rey_y(const Tablero& t);
 void Marcar_amenazas(const Tablero& t , int x_cambiar , int y_cambiar);
+bool Descartar_casos(int x , int y);
 
 void peon(const Tablero& t);
-// bool alfil (int x , int y);
+void alfil (const Tablero& t);
 // bool torre(int x,int y);
 
 

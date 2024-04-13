@@ -170,3 +170,13 @@ void Marcar_amenazas(const Tablero& t , int x_cambiar , int y_cambiar){
     } 
 }
 }
+
+bool Descartar_casos(int x_ver , int y_ver){ //si es verdadera significa que deberemos parar de usar ese caso
+ for (int i = 0 ;i<64 ;i++)
+   {
+    if (t.piezas_tablero[i].x == x_ver && t.piezas_tablero[i].y == y_ver && t.piezas_tablero[i].simbolo != '.' && t.piezas_tablero[i].simbolo != '!'){
+        return true;
+    } 
+}
+return false;
+}
