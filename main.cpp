@@ -4,6 +4,7 @@
 #include "funciones.hpp"
 
 using namespace std;
+int Global_x_rey, Global_y_rey;
 
 int main() {
 
@@ -70,8 +71,11 @@ while(!fich.eof()) // while para recorrer los caracteres
        cout<< "el caracter: "<<t.piezas_tablero[i].simbolo<<" se encuentra en la pos x: " << t.piezas_tablero[i].x <<" se encuentra en la pos y: "<< t.piezas_tablero[i].y<<endl;
     }
 
+Global_x_rey = Pos_Rey_x(t);
+Global_y_rey = Pos_Rey_y(t);
+//cout << "la posicion x del rey es: "<<Pos_Rey_x(t) <<"la posicion y del rey es: "<< Pos_Rey_y(t)<<endl;
 
-cout << "la posicion x del rey es: "<<Pos_Rey_x(t) <<"la posicion y del rey es: "<< Pos_Rey_y(t)<<endl;
+cout << "la variable global x es: " << peon(4,5) <<endl;
 
 delete[] t.piezas_tablero;
 fich.close();
