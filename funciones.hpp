@@ -20,10 +20,14 @@ struct Tablero
 
 int filas(float contador);
 int columnas (float contador);
-bool peon(int x, int y);
+
 bool jugada_dentro_tablero(int x,int y);
 int Pos_Rey_x(const Tablero& t);
 int Pos_Rey_y(const Tablero& t);
+
+bool peon(int x, int y);
+bool alfil (int x , int y);
+bool torre(int x,int y);
 
 
 

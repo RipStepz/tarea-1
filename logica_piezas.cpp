@@ -22,7 +22,6 @@ bool peon(int x, int y)
 
 bool alfil (int x , int y){
 int contador = 1;
-bool flag = true;
 while (contador < 9)
 {
   if (x + contador == Global_x_rey && y + contador == Global_y_rey && jugada_dentro_tablero(x + contador, y + contador)){
@@ -35,6 +34,26 @@ while (contador < 9)
     return true;
     }
   else if (x - contador == Global_x_rey && y - contador == Global_y_rey && jugada_dentro_tablero(x - contador, y - contador)){
+    return true;
+    }
+}
+return false;
+}
+
+bool torre(int x,int y){
+int contador = 1;
+while (contador < 9)
+{
+  if (x + contador == Global_x_rey  && jugada_dentro_tablero(x + contador, y)){
+    return true;
+    }
+  else if (x - contador == Global_x_rey && jugada_dentro_tablero(x - contador, y)){
+    return true;
+    }
+  else if (y + contador == Global_y_rey && jugada_dentro_tablero(x, y + contador)){
+    return true;
+    }
+  else if (y - contador == Global_y_rey && jugada_dentro_tablero(x , y - contador)){
     return true;
     }
 }
