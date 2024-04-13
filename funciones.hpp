@@ -34,7 +34,7 @@ bool Descartar_casos(int x , int y);
 
 void peon(const Tablero& t);
 void alfil (const Tablero& t);
-// bool torre(int x,int y);
+void torre(const Tablero& t);
 
 
 
