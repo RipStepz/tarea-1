@@ -127,7 +127,7 @@ int columnas (float contador)
 
 bool jugada_dentro_tablero(int x,int y) {
 
-     int pos_max_x = 8 , pos_max_y = 7 , pos_min_x = 1 , pos_min_y = 0;
+     int pos_max_x = 8 , pos_max_y = 8 , pos_min_x = 1 , pos_min_y = 1;
 
     if (x < pos_max_x && x > pos_min_x && y < pos_max_y && y > pos_min_y){
         return true;
@@ -165,9 +165,16 @@ int Pos_Rey_y(const Tablero& t){
 bool Tablero_limpio(int x_revision,int y_revision){
 for (int i = 0 ;i<64 ;i++)
   {
-      if (t.piezas_tablero[i].x == x_revision && t.piezas_tablero[i].y == y_revision && (t.piezas_tablero[i].simbolo == '.' or t.piezas_tablero[i].simbolo == 'X' )){
+    if (t.piezas_tablero[i].x == x_revision && t.piezas_tablero[i].y == y_revision && t.piezas_tablero[i].simbolo == '.'){
+        cout <<"x comparacion:" << x_revision << " x tablero: " << t.piezas_tablero[i].x << " y comparacion:" << y_revision << " y tablero: " << t.piezas_tablero[i].y << " caracter: " << t.piezas_tablero[i].simbolo<< endl;
         return true;
-      }
-      }
+    }
+    else{
+        cout << "caracter encontrado: " << t.piezas_tablero[i].simbolo << endl;
+    }
+    // else if(t.piezas_tablero[i].x == x_revision && t.piezas_tablero[i].y == y_revision && (t.piezas_tablero[i].simbolo == 'X' )){
+    //     return true;
+    // }
+    }
 return false;
 }

@@ -67,25 +67,22 @@ while(!fich.eof()) // while para recorrer los caracteres
         c_arreglo = c_arreglo -1;
     }
 }
-    // for (int i = 0 ;i<64 ;i++)
-    // {
-    //    cout<< "el caracter: "<<t.piezas_tablero[i].simbolo<<" se encuentra en la pos x: " << t.piezas_tablero[i].x <<" se encuentra en la pos y: "<< t.piezas_tablero[i].y<<endl;
-    // }
+    //  for (int i = 0 ;i<64 ;i++)
+    //  {
+    //     cout<< "el caracter: "<<t.piezas_tablero[i].simbolo<<" se encuentra en la pos x: " << t.piezas_tablero[i].x <<" se encuentra en la pos y: "<< t.piezas_tablero[i].y<<endl;
+    //  }
 
 Global_x_rey = Pos_Rey_x(t);
 Global_y_rey = Pos_Rey_y(t);
 
 //cout << "la posicion x del rey es: "<<Pos_Rey_x(t) <<"la posicion y del rey es: "<< Pos_Rey_y(t)<<endl;
 
-if (alfil(4,9)){
-    cout<< "jaque" << endl;
-}
-else{
-    cout<< "lloro" << endl;
-}
-
-
-
+ if (torre(1,5)){
+     cout<< "jaque" << endl;
+ }
+ else{
+     cout<< "lloro" << endl;
+ }
 
 delete[] t.piezas_tablero;
 fich.close();
