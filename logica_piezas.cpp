@@ -4,11 +4,18 @@ using namespace std;
 
 extern int Global_x_rey, Global_y_rey;
 
-int peon(int x, int y)
+bool peon(int x, int y)
 {
-    // if (x+1 == Global_x_rey){
+    if (x + 1 == Global_x_rey && y-1 == Global_y_rey && jugada_dentro_tablero(x + 1, y-1)){
+      return true;
+    }
+   
+    if (x-1 == Global_x_rey && y-1 == Global_y_rey && jugada_dentro_tablero(x - 1, y-1)){
 
-    // }
-    return Global_x_rey;
+      return true;
+   }
 
+  else {
+    return false;
+  }
 }

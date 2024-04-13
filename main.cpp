@@ -75,7 +75,15 @@ Global_x_rey = Pos_Rey_x(t);
 Global_y_rey = Pos_Rey_y(t);
 //cout << "la posicion x del rey es: "<<Pos_Rey_x(t) <<"la posicion y del rey es: "<< Pos_Rey_y(t)<<endl;
 
-cout << "la variable global x es: " << peon(4,5) <<endl;
+if (peon(8,6)){
+    cout<< "jaque" << endl;
+}
+else{
+    cout<< "lloro" << endl;
+}
+
+
+
 
 delete[] t.piezas_tablero;
 fich.close();
