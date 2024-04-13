@@ -35,6 +35,8 @@ bool Descartar_casos(int x , int y);
 void peon(const Tablero& t);
 void alfil (const Tablero& t);
 void torre(const Tablero& t);
+void reyna(const Tablero& t);
+void caballo(const Tablero& t);
 
 
 

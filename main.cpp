@@ -69,9 +69,11 @@ while(!fich.eof()) // while para recorrer los caracteres
    
 //cout << "la posicion x del rey es: "<<Pos_Rey_x(t) <<"la posicion y del rey es: "<< Pos_Rey_y(t)<<endl;
 
-// peon(t);
-// alfil(t);
-torre(t);
+//peon(t);
+//alfil(t);
+//torre(t);
+//reyna(t);
+caballo(t);
 
 for (int i = 0; i < 64; i++) {
     cout << t.piezas_tablero[i].simbolo << " ";
