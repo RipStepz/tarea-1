@@ -133,6 +133,10 @@ for (int i = 0 ;i<64 ;i++)
             contador ++;
           }
  contador =1;
+flag_1 = true;
+flag_2 =true;
+flag_3 =true;
+flag_4 =true;
 
             while (contador < 9){
             if (flag_1){
@@ -189,3 +193,4 @@ void caballo(const Tablero& t)
           }
         }
       }
+

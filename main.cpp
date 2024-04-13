@@ -10,7 +10,7 @@ int main() {
 
 //los strucs estan en definidos en funciones.cpp, porque osino causan conflicto (si los usamos:3)
 
-ifstream fich("no.txt");
+ifstream fich("torre_ahogado.txt");
 
 if (!fich.is_open()) // if para comprobar si esta abierto
 {
@@ -71,9 +71,9 @@ while(!fich.eof()) // while para recorrer los caracteres
 
 //peon(t);
 //alfil(t);
-//torre(t);
+torre(t);
 //reyna(t);
-caballo(t);
+//caballo(t);
 
 for (int i = 0; i < 64; i++) {
     cout << t.piezas_tablero[i].simbolo << " ";
