@@ -162,19 +162,11 @@ int Pos_Rey_y(const Tablero& t){
     throw std::runtime_error("Rey no encontrado en el tablero");
 }
 
-bool Tablero_limpio(int x_revision,int y_revision){
-for (int i = 0 ;i<64 ;i++)
-  {
-    if (t.piezas_tablero[i].x == x_revision && t.piezas_tablero[i].y == y_revision && t.piezas_tablero[i].simbolo == '.'){
-        cout <<"x comparacion:" << x_revision << " x tablero: " << t.piezas_tablero[i].x << " y comparacion:" << y_revision << " y tablero: " << t.piezas_tablero[i].y << " caracter: " << t.piezas_tablero[i].simbolo<< endl;
-        return true;
-    }
-    else{
-        cout << "caracter encontrado: " << t.piezas_tablero[i].simbolo << endl;
-    }
-    // else if(t.piezas_tablero[i].x == x_revision && t.piezas_tablero[i].y == y_revision && (t.piezas_tablero[i].simbolo == 'X' )){
-    //     return true;
-    // }
-    }
-return false;
+void Marcar_amenazas(const Tablero& t , int x_cambiar , int y_cambiar){
+ for (int i = 0 ;i<64 ;i++)
+   {
+    if (t.piezas_tablero[i].x == x_cambiar && t.piezas_tablero[i].y == y_cambiar && t.piezas_tablero[i].simbolo == '.'){
+        t.piezas_tablero[i].simbolo = '!';
+    } 
+}
 }

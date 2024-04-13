@@ -18,17 +18,22 @@ struct Tablero
 
 };
 
+struct Coordenada {
+    int x;
+    int y;
+};
+
 int filas(float contador);
 int columnas (float contador);
 
 bool jugada_dentro_tablero(int x,int y);
 int Pos_Rey_x(const Tablero& t);
 int Pos_Rey_y(const Tablero& t);
-bool Tablero_limpio(int x, int y);
+void Marcar_amenazas(const Tablero& t , int x_cambiar , int y_cambiar);
 
-bool peon(int x, int y);
-bool alfil (int x , int y);
-bool torre(int x,int y);
+void peon(const Tablero& t);
+// bool alfil (int x , int y);
+// bool torre(int x,int y);
 
 
 
