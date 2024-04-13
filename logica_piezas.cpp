@@ -218,10 +218,10 @@ for (int i = 0 ;i<64 ;i++)
 bool Rey_X(const Tablero& t){
 for (int i = 0 ;i<64 ;i++)
       {
-        if (t.piezas_tablero[i].simbolo == 'K'){
+        if (t.piezas_tablero[i].simbolo == 'X'){
           int Pos_x = t.piezas_tablero[i].x , Pos_Y = t.piezas_tablero[i].y;
 
-            if(Buscar_espacios_libres(t ,Pos_x + 1 , Pos_Y)){
+            if(Buscar_espacios_libres(t ,Pos_x + 1 , Pos_Y) ){
               return true;
             }
             if (Buscar_espacios_libres(t , Pos_x - 1 , Pos_Y )){
@@ -245,10 +245,10 @@ for (int i = 0 ;i<64 ;i++)
             }
 
 
-            else if (Buscar_espacios_libres(t , Pos_x + 1 , Pos_Y + 1)){
+            if (Buscar_espacios_libres(t , Pos_x + 1 , Pos_Y + 1)){
                return true;
             }
-            else if (Buscar_espacios_libres(t , Pos_x - 1 , Pos_Y + 1)){
+            if (Buscar_espacios_libres(t , Pos_x - 1 , Pos_Y + 1)){
                return true;
             }
           }

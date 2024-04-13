@@ -168,6 +168,9 @@ void Marcar_amenazas(const Tablero& t , int x_cambiar , int y_cambiar){
     if (t.piezas_tablero[i].x == x_cambiar && t.piezas_tablero[i].y == y_cambiar && t.piezas_tablero[i].simbolo == '.'){
         t.piezas_tablero[i].simbolo = '!';
     } 
+    if (t.piezas_tablero[i].x == x_cambiar && t.piezas_tablero[i].y == y_cambiar && t.piezas_tablero[i].simbolo == 'X'){
+        t.piezas_tablero[i].simbolo = '$';
+    }
 }
 }
 
