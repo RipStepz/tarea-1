@@ -3,6 +3,7 @@
 #include "funciones.hpp"
 
 using namespace std;
+extern Tablero t;
 
 int filas(float contador) {
     if (contador/8 <= 1)
@@ -161,6 +162,12 @@ int Pos_Rey_y(const Tablero& t){
     throw std::runtime_error("Rey no encontrado en el tablero");
 }
 
-bool Tablero_limpio(const Tablero& t){
-
+bool Tablero_limpio(int x_revision,int y_revision){
+for (int i = 0 ;i<64 ;i++)
+  {
+      if (t.piezas_tablero[i].x == x_revision && t.piezas_tablero[i].y == y_revision && (t.piezas_tablero[i].simbolo == '.' or t.piezas_tablero[i].simbolo == 'X' )){
+        return true;
+      }
+      }
+return false;
 }

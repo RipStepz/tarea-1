@@ -5,6 +5,8 @@
 
 using namespace std;
 int Global_x_rey, Global_y_rey;
+Tablero t;
+
 int main() {
 
 //los strucs estan en definidos en funciones.cpp, porque osino causan conflicto (si los usamos:3)
@@ -31,7 +33,7 @@ string numero = "";
 float contador = 1;
 int c_arreglo = 0;
 const int Max = 64;
-Tablero t;
+
 t.piezas_tablero = new Pieza[64];
 
  if (getline(fich , numero))
@@ -72,6 +74,7 @@ while(!fich.eof()) // while para recorrer los caracteres
 
 Global_x_rey = Pos_Rey_x(t);
 Global_y_rey = Pos_Rey_y(t);
+
 //cout << "la posicion x del rey es: "<<Pos_Rey_x(t) <<"la posicion y del rey es: "<< Pos_Rey_y(t)<<endl;
 
 if (alfil(4,9)){

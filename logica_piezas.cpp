@@ -6,11 +6,11 @@ extern int Global_x_rey, Global_y_rey;
 
 bool peon(int x, int y)
 {
-    if (x + 1 == Global_x_rey && y-1 == Global_y_rey && jugada_dentro_tablero(x + 1, y-1)){
+    if (x + 1 == Global_x_rey && y-1 == Global_y_rey && jugada_dentro_tablero(x + 1, y-1) && Tablero_limpio(x+1,y-1)){
       return true;
     }
    
-    if (x-1 == Global_x_rey && y-1 == Global_y_rey && jugada_dentro_tablero(x - 1, y-1)){
+    if (x-1 == Global_x_rey && y-1 == Global_y_rey && jugada_dentro_tablero(x - 1, y-1) && Tablero_limpio(x-1,y-1) ){
 
       return true;
    }
@@ -24,16 +24,16 @@ bool alfil (int x , int y){
 int contador = 1;
 while (contador < 9)
 {
-  if (x + contador == Global_x_rey && y + contador == Global_y_rey && jugada_dentro_tablero(x + contador, y + contador)){
+  if (x + contador == Global_x_rey && y + contador == Global_y_rey && jugada_dentro_tablero(x + contador, y + contador) && Tablero_limpio(x + contador,y + contador)){
     return true;
     }
-  else if (x - contador == Global_x_rey && y + contador == Global_y_rey && jugada_dentro_tablero(x - contador, y + contador)){
+  else if (x - contador == Global_x_rey && y + contador == Global_y_rey && jugada_dentro_tablero(x - contador, y + contador) && Tablero_limpio(x - contador,y + contador) ){
     return true;
     }
-  else if (x + contador == Global_x_rey && y - contador == Global_y_rey && jugada_dentro_tablero(x + contador, y - contador)){
+  else if (x + contador == Global_x_rey && y - contador == Global_y_rey && jugada_dentro_tablero(x + contador, y - contador) && Tablero_limpio(x + contador,y - contador)){
     return true;
     }
-  else if (x - contador == Global_x_rey && y - contador == Global_y_rey && jugada_dentro_tablero(x - contador, y - contador)){
+  else if (x - contador == Global_x_rey && y - contador == Global_y_rey && jugada_dentro_tablero(x - contador, y - contador) && Tablero_limpio(x - contador,y - contador)){
     return true;
     }
 contador ++;
@@ -45,16 +45,16 @@ bool torre(int x,int y){
 int contador = 1;
 while (contador < 9)
 {
-  if (x + contador == Global_x_rey  && jugada_dentro_tablero(x + contador, y)){
+  if (x + contador == Global_x_rey  && jugada_dentro_tablero(x + contador, y) && Tablero_limpio(x + contador,y)){
     return true;
     }
-  else if (x - contador == Global_x_rey && jugada_dentro_tablero(x - contador, y)){
+  else if (x - contador == Global_x_rey && jugada_dentro_tablero(x - contador, y) && Tablero_limpio(x - contador,y)){
     return true;
     }
-  else if (y + contador == Global_y_rey && jugada_dentro_tablero(x, y + contador)){
+  else if (y + contador == Global_y_rey && jugada_dentro_tablero(x, y + contador)&& Tablero_limpio(x,y + contador)){
     return true;
     }
-  else if (y - contador == Global_y_rey && jugada_dentro_tablero(x , y - contador)){
+  else if (y - contador == Global_y_rey && jugada_dentro_tablero(x , y - contador) && Tablero_limpio(x,y - contador)){
     return true;
     }
 contador ++;

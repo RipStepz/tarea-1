@@ -24,6 +24,7 @@ int columnas (float contador);
 bool jugada_dentro_tablero(int x,int y);
 int Pos_Rey_x(const Tablero& t);
 int Pos_Rey_y(const Tablero& t);
+bool Tablero_limpio(int x, int y);
 
 bool peon(int x, int y);
 bool alfil (int x , int y);
