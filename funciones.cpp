@@ -160,3 +160,7 @@ int Pos_Rey_y(const Tablero& t){
   }
     throw std::runtime_error("Rey no encontrado en el tablero");
 }
+
+bool Tablero_limpio(const Tablero& t){
+
+}
