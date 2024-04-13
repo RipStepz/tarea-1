@@ -19,3 +19,24 @@ bool peon(int x, int y)
     return false;
   }
 }
+
+bool alfil (int x , int y){
+int contador = 1;
+bool flag = true;
+while (contador < 9)
+{
+  if (x + contador == Global_x_rey && y + contador == Global_y_rey && jugada_dentro_tablero(x + contador, y + contador)){
+    return true;
+    }
+  else if (x - contador == Global_x_rey && y + contador == Global_y_rey && jugada_dentro_tablero(x - contador, y + contador)){
+    return true;
+    }
+  else if (x + contador == Global_x_rey && y - contador == Global_y_rey && jugada_dentro_tablero(x + contador, y - contador)){
+    return true;
+    }
+  else if (x - contador == Global_x_rey && y - contador == Global_y_rey && jugada_dentro_tablero(x - contador, y - contador)){
+    return true;
+    }
+}
+return false;
+}
