@@ -194,3 +194,64 @@ void caballo(const Tablero& t)
         }
       }
 
+void Rey_S(const Tablero& t){
+for (int i = 0 ;i<64 ;i++)
+      {
+        if (t.piezas_tablero[i].simbolo == 'K'){
+          int Pos_x = t.piezas_tablero[i].x , Pos_Y = t.piezas_tablero[i].y;
+
+            Marcar_amenazas(t , Pos_x + 1 , Pos_Y );
+            Marcar_amenazas(t , Pos_x - 1 , Pos_Y );
+
+            Marcar_amenazas(t , Pos_x , Pos_Y + 1 );
+            Marcar_amenazas(t , Pos_x , Pos_Y - 1 );
+
+            Marcar_amenazas(t , Pos_x + 1 , Pos_Y - 1 );
+            Marcar_amenazas(t , Pos_x - 1 , Pos_Y - 1 );
+
+            Marcar_amenazas(t , Pos_x + 1 , Pos_Y + 1 );
+            Marcar_amenazas(t , Pos_x - 1 , Pos_Y + 1 );
+          }
+        }
+}
+
+bool Rey_X(const Tablero& t){
+for (int i = 0 ;i<64 ;i++)
+      {
+        if (t.piezas_tablero[i].simbolo == 'K'){
+          int Pos_x = t.piezas_tablero[i].x , Pos_Y = t.piezas_tablero[i].y;
+
+            if(Buscar_espacios_libres(t ,Pos_x + 1 , Pos_Y)){
+              return true;
+            }
+            if (Buscar_espacios_libres(t , Pos_x - 1 , Pos_Y )){
+               return true;
+            }
+        
+
+            if (Buscar_espacios_libres(t , Pos_x , Pos_Y + 1 )){
+               return true;
+            }
+            if (Buscar_espacios_libres(t , Pos_x , Pos_Y - 1)){
+               return true;
+            }
+
+
+            if (Buscar_espacios_libres(t , Pos_x + 1 , Pos_Y - 1)){
+               return true;
+            }
+            if (Buscar_espacios_libres(t , Pos_x - 1 , Pos_Y - 1)){
+               return true;
+            }
+
+
+            else if (Buscar_espacios_libres(t , Pos_x + 1 , Pos_Y + 1)){
+               return true;
+            }
+            else if (Buscar_espacios_libres(t , Pos_x - 1 , Pos_Y + 1)){
+               return true;
+            }
+          }
+        }
+return false;
+}

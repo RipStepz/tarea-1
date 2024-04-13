@@ -10,7 +10,7 @@ int main() {
 
 //los strucs estan en definidos en funciones.cpp, porque osino causan conflicto (si los usamos:3)
 
-ifstream fich("torre_ahogado.txt");
+ifstream fich("no.txt");
 
 if (!fich.is_open()) // if para comprobar si esta abierto
 {
@@ -69,11 +69,12 @@ while(!fich.eof()) // while para recorrer los caracteres
    
 //cout << "la posicion x del rey es: "<<Pos_Rey_x(t) <<"la posicion y del rey es: "<< Pos_Rey_y(t)<<endl;
 
-//peon(t);
-//alfil(t);
+peon(t);
+alfil(t);
 torre(t);
-//reyna(t);
-//caballo(t);
+reyna(t);
+caballo(t);
+Rey_S(t);
 
 for (int i = 0; i < 64; i++) {
     cout << t.piezas_tablero[i].simbolo << " ";
@@ -82,9 +83,15 @@ for (int i = 0; i < 64; i++) {
     }
 }
 
+if (Rey_X(t)){
+cout << "no hay jaque mate" << endl;
+}
+
+else{
+    cout << "hay jaque mate" << endl;
+}
 
 delete[] t.piezas_tablero;
 fich.close();
     return 0;
-
 }

@@ -180,3 +180,13 @@ bool Descartar_casos(int x_ver , int y_ver){ //si es verdadera significa que deb
 }
 return false;
 }
+
+bool Buscar_espacios_libres(const Tablero& t , int x_rey , int y_rey) {
+     for (int i = 0 ;i<64 ;i++)
+   {
+    if (t.piezas_tablero[i].x == x_rey && t.piezas_tablero[i].y == y_rey && t.piezas_tablero[i].simbolo != '!'){
+       return true;
+    } 
+}
+return false;
+}
