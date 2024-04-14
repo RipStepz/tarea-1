@@ -48,12 +48,12 @@ reyna(t);
 caballo(t);
 Rey_S(t);
 
-for (int i = 0; i < 64; i++) {
-    cout << t.piezas_tablero[i].simbolo << " ";
-    if ((i + 1) % 8 == 0) {
-        cout << endl; // Después de imprimir cada fila, imprime un salto de línea
-    }
-}
+// for (int i = 0; i < 64; i++) {
+//     cout << t.piezas_tablero[i].simbolo << " ";
+//     if ((i + 1) % 8 == 0) {
+//         cout << endl; // Después de imprimir cada fila, imprime un salto de línea
+//     }
+// } Si quiere comprobar como se comporta el programa descomente este for
 
 if (Rey_X(t)){
 cout << "No" << endl;
