@@ -8,13 +8,12 @@ Tablero t;
 
 int main(){ //los strucs estan en definidos en funciones.cpp, porque o si no causan conflicto (si los usamos:3)
 
-ifstream fich("si.txt");
+ifstream fich("no.txt");
 
 char caracter;
 string numero = "";
 float contador = 1;
 int c_arreglo = 0;
-const int Max = 64;
 
 t.piezas_tablero = new Pieza[64];
 
