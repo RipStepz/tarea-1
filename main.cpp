@@ -8,7 +8,7 @@ Tablero t;
 
 int main(){ //los strucs estan en definidos en funciones.cpp, porque o si no causan conflicto (si los usamos:3)
 
-ifstream fich("torre_ahogado.txt");
+ifstream fich("si.txt");
 
 char caracter;
 string numero = "";
@@ -49,19 +49,24 @@ reyna(t);
 caballo(t);
 Rey_S(t);
 
-// for (int i = 0; i < 64; i++) {
-//     cout << t.piezas_tablero[i].simbolo << " ";
-//     if ((i + 1) % 8 == 0) {
-//         cout << endl; // Después de imprimir cada fila, imprime un salto de línea
-//     }
-// }
+for (int i = 0; i < 64; i++) {
+    cout << t.piezas_tablero[i].simbolo << " ";
+    if ((i + 1) % 8 == 0) {
+        cout << endl; // Después de imprimir cada fila, imprime un salto de línea
+    }
+}
 
 if (Rey_X(t)){
-cout << "no" << endl;
+cout << "No" << endl;
 }
 
 else{
-    cout << "si" << endl;
+    if (Verificar_Rey_Ahogado(t)){
+    cout << "No" << endl; //hay rey ahogado
+    }
+    else{
+        cout << "Si" << endl;
+    }
 }
 
 fich.close();
