@@ -4,8 +4,7 @@ using namespace std;
 extern Tablero t;
 
 void peon(const Tablero& t){
-   for (int i = 0 ;i<64 ;i++){
-
+      for (int i = 0 ;i<64 ;i++){
         if (t.piezas_tablero[i].simbolo == 'P'){
           int Pos_x = t.piezas_tablero[i].x , Pos_Y = t.piezas_tablero[i].y;
 
@@ -30,8 +29,7 @@ TipoRetorno, Descripción retorno: Al ser una funcion tipo void no retorna nada
 */
 
 void alfil(const Tablero& t){
-for (int i = 0 ;i<64 ;i++){
-        
+      for (int i = 0 ;i<64 ;i++){
         if (t.piezas_tablero[i].simbolo == 'A'){
           int Pos_x = t.piezas_tablero[i].x , Pos_Y = t.piezas_tablero[i].y, contador = 1;
           bool flag_1 = true , flag_2 = true , flag_3 = true , flag_4 = true;
@@ -85,7 +83,7 @@ TipoRetorno, Descripción retorno: Al ser una funcion tipo void no retorna nada
 */
 
 void torre(const Tablero& t){
-for (int i = 0 ;i<64 ;i++) {
+      for (int i = 0 ;i<64 ;i++) {
         if (t.piezas_tablero[i].simbolo == 'T'){
           int Pos_x = t.piezas_tablero[i].x , Pos_Y = t.piezas_tablero[i].y, contador = 1;
           bool flag_1 = true , flag_2 = true , flag_3 = true , flag_4 = true;
@@ -138,7 +136,7 @@ TipoRetorno, Descripción retorno: Al ser una funcion tipo void no retorna nada
 */
 
 void reyna(const Tablero& t){
-for (int i = 0 ;i<64 ;i++){
+      for (int i = 0 ;i<64 ;i++){
         if (t.piezas_tablero[i].simbolo == 'R'){
           int Pos_x = t.piezas_tablero[i].x , Pos_Y = t.piezas_tablero[i].y, contador = 1;
           bool flag_1 = true , flag_2 = true , flag_3 = true , flag_4 = true;
@@ -173,6 +171,7 @@ for (int i = 0 ;i<64 ;i++){
             }
             contador ++;
           }
+
 contador =1;
 flag_1 = true;
 flag_2 =true;
@@ -227,7 +226,7 @@ TipoRetorno, Descripción retorno: Al ser una funcion tipo void no retorna nada
 */
 
 void caballo(const Tablero& t){
-   for (int i = 0 ;i<64 ;i++){
+      for (int i = 0 ;i<64 ;i++){
         if (t.piezas_tablero[i].simbolo == 'C'){
           int Pos_x = t.piezas_tablero[i].x , Pos_Y = t.piezas_tablero[i].y;
 
@@ -260,7 +259,7 @@ TipoRetorno, Descripción retorno: Al ser una funcion tipo void no retorna nada
 */
 
 void Rey_S(const Tablero& t){
-for (int i = 0 ;i<64 ;i++){
+      for (int i = 0 ;i<64 ;i++){
         if (t.piezas_tablero[i].simbolo == 'K'){
           int Pos_x = t.piezas_tablero[i].x , Pos_Y = t.piezas_tablero[i].y;
 
@@ -293,7 +292,7 @@ TipoRetorno, Descripción retorno: Al ser una funcion tipo void no retorna nada
 */
 
 bool Rey_X(const Tablero& t){
-for (int i = 0 ;i<64 ;i++){
+      for (int i = 0 ;i<64 ;i++){
         if (t.piezas_tablero[i].simbolo == 'X' or t.piezas_tablero[i].simbolo == '$'){
           int Pos_x = t.piezas_tablero[i].x , Pos_Y = t.piezas_tablero[i].y;
 

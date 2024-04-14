@@ -127,14 +127,15 @@ retorna un entero, el retorno devolvera la coordenada x recordando que la coorde
 */
 
 void Marcar_amenazas(const Tablero& t , int x_cambiar , int y_cambiar){
- for (int i = 0 ;i<64 ;i++){
-    if (t.piezas_tablero[i].x == x_cambiar && t.piezas_tablero[i].y == y_cambiar && t.piezas_tablero[i].simbolo == '.'){
-        t.piezas_tablero[i].simbolo = '!';
-    } 
-    if (t.piezas_tablero[i].x == x_cambiar && t.piezas_tablero[i].y == y_cambiar && t.piezas_tablero[i].simbolo == 'X'){
-        t.piezas_tablero[i].simbolo = '$';
+    for (int i = 0 ;i<64 ;i++){
+        if (t.piezas_tablero[i].x == x_cambiar && t.piezas_tablero[i].y == y_cambiar && t.piezas_tablero[i].simbolo == '.'){
+            t.piezas_tablero[i].simbolo = '!';
+        } 
+
+        if (t.piezas_tablero[i].x == x_cambiar && t.piezas_tablero[i].y == y_cambiar && t.piezas_tablero[i].simbolo == 'X'){
+            t.piezas_tablero[i].simbolo = '$';
+        }
     }
-}
 }
 
 /*****
@@ -144,19 +145,19 @@ void Marcar_amenazas(const Tablero& t , int x_cambiar , int y_cambiar){
 * cuando encontramos X lo cambiamos por $ para poder diferenciar los jaques mates de rey ahogado mas adelante
 ******
 * Input:
-* tipoParámetro NombreParámetro : Descripción Parámetro
+* Ingresa un struct t tipo Tablero un x_cambiar, y_cambiar que no son mas la posicion a la que se mueve una pieza (dato tipo entero)
 * .......
 ******
 * Returns:
-* TipoRetorno, Descripción retorno
+* Esta funcion no retorna nada, pero modifica el struct t
 *****/
 
-bool Buscar_espacios_libres(const Tablero& t , int x_rey , int y_rey) {
+bool Buscar_espacios_libres(const Tablero& t , int x_rey , int y_rey){
     for (int i = 0 ;i<64 ;i++){
-    if (t.piezas_tablero[i].x == x_rey && t.piezas_tablero[i].y == y_rey && t.piezas_tablero[i].simbolo != '!'){
-       return true;
-    } 
-}
+        if (t.piezas_tablero[i].x == x_rey && t.piezas_tablero[i].y == y_rey && t.piezas_tablero[i].simbolo != '!'){
+        return true;
+        } 
+    }
 return false;
 }
 
@@ -176,11 +177,11 @@ retorna un bool que es true lo que significa que hay espacios libres y no hay ja
 */
 
 bool Descartar_casos(int x_ver , int y_ver){ //si es verdadera significa que deberemos parar de usar ese caso
- for (int i = 0 ;i<64 ;i++){
-    if (t.piezas_tablero[i].x == x_ver && t.piezas_tablero[i].y == y_ver && t.piezas_tablero[i].simbolo != '.' && t.piezas_tablero[i].simbolo != '!'){
-        return true;
-    } 
-}
+    for (int i = 0 ;i<64 ;i++){
+        if (t.piezas_tablero[i].x == x_ver && t.piezas_tablero[i].y == y_ver && t.piezas_tablero[i].simbolo != '.' && t.piezas_tablero[i].simbolo != '!'){
+            return true;
+        } 
+    }
 return false;
 }
 
@@ -200,13 +201,13 @@ retorna un true en caso de que encuentre una pieza, para descartar el caso , si 
 
 bool Verificar_Rey_Ahogado(const Tablero& t) {
     for (int i = 0 ;i<64 ;i++){
-    if (t.piezas_tablero[i].simbolo == 'X'){ // si encuentro X, como era originalmente retorna verdaro, el caso contrario, es cuando el X se transformo a $ retorna falso
-       return true; //este caso es ahogado
-    } 
-    if (t.piezas_tablero[i].simbolo == '$'){ 
-        return false; // este caso es jaque
+        if (t.piezas_tablero[i].simbolo == 'X'){ // si encuentro X, como era originalmente retorna verdaro, el caso contrario, es cuando el X se transformo a $ retorna falso
+        return true; //este caso es ahogado
+        } 
+        if (t.piezas_tablero[i].simbolo == '$'){ 
+            return false; // este caso es jaque
+        }
     }
-}
 return false;
 }
 

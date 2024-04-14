@@ -8,7 +8,7 @@ Tablero t;
 
 int main(){ //los strucs estan en definidos en funciones.cpp, porque o si no causan conflicto (si los usamos:3)
 
-ifstream fich("no.txt");
+ifstream fich("tablero.txt");
 
 char caracter;
 string numero = "";
