@@ -17,7 +17,7 @@ void peon(const Tablero& t){
       }
 
 /**
-TipoFunción:Es una funcion de tipo void NombreFunción
+TipoFunción:Es una funcion de tipo void NombreFunción: peon
 **
 Resumen Función: Esta funcion busca el o los peones recorriendo el tablero, luego usa la funcion Marcar_amenazas para evaluar las posibles amenazas siguiendo la logica de movimento de peon para despues marcar las casillas amenazadas con un (!)
 **
@@ -72,7 +72,7 @@ for (int i = 0 ;i<64 ;i++){
 }
 
 /**
-TipoFunción:Es una funcion de tipo void NombreFunción
+TipoFunción:Es una funcion de tipo void NombreFunción: alfil
 **
 Resumen Función:Esta funcion busca un alfil recorriendo el tablero, luego utiliza un bucle para evaluar las posibles amenazas diagonales que puede hacer en todas las direcciones, para cada amenaza detectada marca la casilla con un (!) usando la funcion Marcer_amenazas y usa la condicion de control (flag_1, flag_2, flag_3, flag_4) para decidir si debe continuar evaluando la direccion.
 **
@@ -125,7 +125,7 @@ for (int i = 0 ;i<64 ;i++) {
 }
 
 /*
-TipoFunción:Es una funcion de tipo void NombreFunción
+TipoFunción:Es una funcion de tipo void NombreFunción: torre
 **
 Resumen Función:Esta funcion busca la o las Torres presentes en el tablero recorriendolo, luego utiliza un bucle para poder evaluar las posibles amenazas verticales y horizontales de todas las direcciones posibles para luego usar la funcion Marcar_amenaza para poder maracar las casillas amenazadas por un (!) ademas de usar las codiciones de control (flag_1, flag_2, flag_3, flag_4) para decidir si debe continuar evaluando la direccion
 **
@@ -214,7 +214,7 @@ flag_4 =true;
 }
 
 /*
-TipoFunción:Es una funcion de tipo void NombreFunción
+TipoFunción:Es una funcion de tipo void NombreFunción: reyna
 **
 Resumen Función:Esta funcion busca a la reina presente en el tablero recorriendolo, luego utiliza dos bucles el primero evalua las posibles amenazas verticales y horizontales de todas las direcciones posible, y el segundo evalua las amenazas diagonales de todas las direcciones posibles para luego usar la funcion Marcar_amenaza para poder maracar las casillas amenazadas por un (!) ademas d que ambos bucles usan las codiciones de control (flag_1, flag_2, flag_3, flag_4) para decidir si debe continuar evaluando la direccion, para poder usar las concuones de control en el segundo bucle se reinician
 **
@@ -247,7 +247,7 @@ void caballo(const Tablero& t){
       }
 
 /**
-TipoFunción:Es una funcion de tipo void NombreFunción
+TipoFunción:Es una funcion de tipo void NombreFunción: caballo
 **
 Resumen Función: Esta funcion busca el o los caballos recorriendo el tablero, luego usa la funcion Marcar_amenazas para evaluar las posibles amenazas siguiendo la logica de movimento del caballo para despues marcar las casillas amenazadas con un (!)
 **
@@ -280,7 +280,7 @@ for (int i = 0 ;i<64 ;i++){
 }
 
 /*
-TipoFunción:Es una funcion de tipo void NombreFunción
+TipoFunción:Es una funcion de tipo void NombreFunción: Rey_S
 **
 Resumen Función: Esta funcion busca al rey recorriendo el tablero, luego usa la funcion Marcar_amenazas para evaluar las posibles amenazas siguiendo la logica de movimento del rey para despues marcar las casillas amenazadas con un (!)
 **
@@ -333,14 +333,14 @@ return false;
 }
 
 /*
-TipoFunción: Es una funcion de tipo bool NombreFunción
+TipoFunción: Es una funcion de tipo bool NombreFunción: Rey_X
 **
-Resumen Función: Esta funcion se encarga de verificar si el rey  tiene al menos un movimiento legal disponible en un tablero. Utiliza un bucle para encontrar la posición del rey y luego evalúa las posibles casillas adyacentes y diagonales para determinar si alguna de ellas está vacía y puede ser ocupada por el rey.
+Resumen Función: Esta funcion se encarga de verificar si el rey tiene al menos un movimiento legal disponible en un tablero. Utiliza un bucle para encontrar la posición del rey y luego evalúa las posibles casillas adyacentes y diagonales para determinar si alguna de ellas está vacía y puede ser ocupada por el rey.
 **
 Input:
 Entra un struct t tipo Tablero, que nos entrega el tablero
 .......
 **
 Returns:
-TipoRetorno, Descripción retorno: Al ser una funcion de tipo bool retorna true o false
+TipoRetorno, Descripción retorno: retorna true si encuentra espacios libres y false si no tiene ningun mavimiento legal
 */ 
